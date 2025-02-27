@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Metrophobic&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(
+    to bottom,
+    #0a0f1a,
+    #1a202c
+  ); /* Deeper dark gradient for contrast */
+  color: #ffffff;
+}
+
+.loader {
+  border: 4px solid #a0aec0; /* Light gray border */
+  border-top: 4px solid #ffffff; /* White top border for spinning effect */
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom styles for eye-catching, minimalistic UI */
+.max-w-5xl {
+  max-width: 80rem; /* Wider for an impressive layout */
+}
+
+.max-w-6xl {
+  max-width: 96rem; /* Wider header for impact */
+}
+
+.bg-gradient-to-r.from-purple-900 {
+  background-image: linear-gradient(to right, #4a5568, #2d3748, #1a202c);
+}
+
+.bg-gradient-to-r.from-gray-800 {
+  background-image: linear-gradient(to right, #2d3748, #4a5568, #718096);
+}
+
+.bg-gradient-to-r.from-gray-700 {
+  background-image: linear-gradient(to right, #4a5568, #718096, #a0aec0);
+}
+
+.bg-gradient-to-b.from-gray-900 {
+  background-image: linear-gradient(to bottom, #1a202c, #2d3748);
+}
+
+.shadow-2xl {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.text-2xl,
+.text-3xl,
+.text-4xl {
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.text-xl,
+.text-lg {
+  line-height: 1.6;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+.space-y-16 > * + * {
+  margin-top: 4rem;
+}
+
+.space-y-12 > * + * {
+  margin-top: 3rem;
+}
+
+.space-y-8 > * + * {
+  margin-top: 2rem;
+}
+
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.min-h-70vh {
+  min-height: 70vh; /* Ensure notes take up significant screen height */
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bg-gradient-to-r.from-pink-500 {
+  background-image: linear-gradient(to right, #ff4d4d, #ff6b6b, #ff8c8c);
+}
+
+.bg-gradient-to-r.from-blue-500 {
+  background-image: linear-gradient(to right, #4299e1, #63b3ed, #8ecae6);
+}
+
+.bg-gradient-to-r.from-pink-600 {
+  background-image: linear-gradient(to right, #e53e3e, #f56565, #fc8181);
+}
+
+.bg-gradient-to-r.from-blue-600 {
+  background-image: linear-gradient(to right, #3182ce, #4299e1, #63b3ed);
+}
+
+.hover:scale-105 {
+  transform: scale(1.05);
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.hover:underline {
+  text-decoration: underline;
+}
+
+.underline-offset-4 {
+  text-underline-offset: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .max-w-5xl,
+  .max-w-6xl {
+    max-width: 100%;
+    padding: 1rem;
+  }
+  .text-4xl {
+    font-size: 2rem;
+  }
+  .text-3xl {
+    font-size: 1.75rem;
+  }
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+  .text-xl {
+    font-size: 1.125rem;
+  }
+  .text-lg {
+    font-size: 1rem;
+  }
+  .p-8 {
+    padding: 1rem;
+  }
+  .p-6 {
+    padding: 0.75rem;
+  }
+  .py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  .px-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
