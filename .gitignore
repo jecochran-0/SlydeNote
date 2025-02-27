@@ -46,4 +46,3 @@ backend/venv/
 backend/venv/lib/
 backend/venv/lib/python3.12/site-packages/torch/lib/libtorch_cpu.dylib
 node_modules
-node_modules
