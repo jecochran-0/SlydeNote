@@ -11,7 +11,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <Link
           href="/"
-          className="text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-sky-200 hover:scale-105 transition-transform duration-300"
+          className="text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 to-sky-200 hover:scale-105 transition-transform duration-300"
         >
           SlydeNote
         </Link>

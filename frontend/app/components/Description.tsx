@@ -1,7 +1,7 @@
 export default function Description() {
   return (
     <section className="bg-gray-700 text-white p-8 rounded-xl shadow-2xl max-w-4xl mx-auto my-12 animate-fade-in">
-      <h2 className=" text-3xl font-bold mb-6 text-center text-transparent bg-clip-text bg-sky-100">
+      <h2 className=" text-3xl font-bold mb-6 text-center text-transparent bg-clip-text bg-sky-100 animate-fade-in">
         Welcome to SlydeNote
       </h2>
       <p className="text-s leading-relaxed text-gray-200 ">

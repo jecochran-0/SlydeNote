@@ -120,22 +120,22 @@ export default function NotesDisplay({
   return (
     <div className="bg-gradient-to-b from-gray-900 to-gray-800 min-h-screen p-4 text-white font-sans">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-100">
+        <h1 className="text-4xl font-bold mb-8 text-center text-transparent bg-clip-text text-zinc-200">
           PPT to Academic Notes
         </h1>
-        <div className="mb-4 text-right">
+        <div className="mb-4 text-right flex justify-center">
           <button
             onClick={handleDownloadPDF}
-            className="bg-green-400 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+            className="bg-orange-400 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
           >
             Download Notes as PDF
           </button>
         </div>
         <div
           id="notes-content"
-          className="p-8 bg-gray-800 rounded-xl shadow-2xl"
+          className="p-8 bg-gray-800 rounded-xl shadow-2xl mt-20"
         >
-          <h2 className="text-3xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-200">
+          <h2 className="text-3xl font-bold mb-6 text-center text-transparent bg-clip-text text-zinc-200">
             Your Academic Notes
           </h2>
           <div className="space-y-16">
@@ -145,7 +145,7 @@ export default function NotesDisplay({
                 <h3 className="text-2xl font-semibold mb-6 text-blue-300">
                   Guiding Questions
                 </h3>
-                <ol className="list-decimal list-inside space-y-6 text-2xl leading-relaxed">
+                <ol className="list-decimal list-inside space-y-6 text-xl leading-relaxed">
                   {notes.guiding_questions.map((question, index) => (
                     <li
                       key={index}
@@ -164,7 +164,7 @@ export default function NotesDisplay({
                 <h3 className="text-2xl font-semibold mb-6 text-gray-200">
                   Notes
                 </h3>
-                <ol className="list-decimal list-inside space-y-8 text-2xl leading-relaxed">
+                <ol className="list-decimal list-inside space-y-8 text-xl leading-relaxed">
                   {notes.notes.map((note, index) => (
                     <li
                       key={index}
@@ -174,18 +174,6 @@ export default function NotesDisplay({
                     </li>
                   ))}
                 </ol>
-              </section>
-            )}
-
-            {/* Image References Section - Use paragraph format, minimalistic */}
-            {notes.image_references.length > 0 && (
-              <section className="animate-fade-in">
-                <h3 className="text-2xl font-semibold mb-6 text-green-300">
-                  Image References
-                </h3>
-                <p className="text-2xl text-gray-200 hover:text-blue-300 transition-colors duration-300">
-                  {notes.image_references.join(", ")}
-                </p>
               </section>
             )}
           </div>
